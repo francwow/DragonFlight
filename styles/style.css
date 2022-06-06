@@ -1,0 +1,148 @@
+/*  GENERAL STYLES */
+*{
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+
+}
+/* /GENERAL STYLES */
+
+/* ----------------------- MOBILE FIRST STYLES ------------------------- */
+
+/* MAIN NAV */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: tomato;
+  color: white;
+  width: 100%;
+}
+
+.logo {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  font-size: large;
+  justify-content: space-around;
+  width: 40%;
+  z-index: 99;
+}
+
+nav li {
+  list-style: none;
+  margin: 0 20px 0 20px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 30px;
+  height: 3px;
+  background-color: white; 
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+
+@keyframes navLinkFade{
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+   
+ }
+ /* /MAIN NAV */
+
+ /* MAIN SECTION */
+.main-section {
+  background-image: url(../images/Dragonflight.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.video-container {
+  margin: auto;
+  width: 400px;
+  height: 225px;
+  overflow-y: hidden;
+}
+
+/* /MAIN SECTION */
+
+/* MEDIA QUERIES */
+@media screen and (max-width:1024px) {
+  .nav-links{
+    width: 60%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    background-color: tomato;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform .5s ease-in;
+  }
+  .nav-links li {
+    margin: 50px 20px;
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+  .nav-active {
+    transform: translateX(0); 
+   }
+}
+
