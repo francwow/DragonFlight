@@ -11,9 +11,15 @@ img {
   max-width: 100%;
 }
 
+html {
+  height: 100vh;
+}
+
 body {
-
-
+  background-image: url(../images/Dragonflight.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 /* /GENERAL STYLES */
 
@@ -136,13 +142,13 @@ nav li {
 }
 
 footer {
-  position: relative;
-  bottom: 0;
+  color: white;
   background-color: tomato;
-  height: 50px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 /* /MAIN SECTION */
 
