@@ -112,7 +112,8 @@ nav li {
   bottom: 0;
   background-color: rgba(0,0,0,.3);
   opacity: 0;
-  transition: opacity .5s ease-in;
+  display: none;
+  transition: opacity .5s ease-in-out;
 }
 
 .overlay-visible {
@@ -123,6 +124,7 @@ nav li {
   bottom: 0;
   background-color: rgba(0,0,0,.3);
   opacity: 1;
+  display: block;
   transition: opacity .5s ease-in;
 }
 
