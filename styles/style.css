@@ -166,7 +166,7 @@ footer {
   .nav-links {
     position: absolute;
     right: 0;
-    height: 60vh;
+    height: 80vh;
     top: 8vh;
     background-color: tomato;
     flex-direction: column;
