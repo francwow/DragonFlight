@@ -14,7 +14,7 @@ img {
 body {
   background-image: url(../images/Dragonflight.png);
   background-repeat: no-repeat;
-  background-size:auto;
+  background-size: auto;
 
 }
 /* /GENERAL STYLES */
@@ -22,6 +22,7 @@ body {
 /* ----------------------- MOBILE FIRST STYLES ------------------------- */
 
 /* MAIN NAV */
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -102,7 +103,6 @@ nav li {
  /* MAIN SECTION */
 .main-section {
   position: relative;
-  height: 100%;
 }
 
 .overlay {
@@ -166,7 +166,7 @@ footer {
   .nav-links {
     position: absolute;
     right: 0;
-    height: 100vh;
+    height: 60vh;
     top: 8vh;
     background-color: tomato;
     flex-direction: column;
