@@ -103,8 +103,8 @@ nav li {
 
 .video-container {
   margin: auto;
-  width: 400px;
-  height: 225px;
+  width: 720px;
+  height: 405px;
   overflow-y: hidden;
 }
 
@@ -114,6 +114,13 @@ nav li {
 @media screen and (max-width:1024px) {
   .nav-links{
     width: 60%;
+  }
+
+  .video-container {
+    margin: auto;
+    width: 400px;
+    height: 225px;
+    overflow-y: hidden;
   }
 }
 
