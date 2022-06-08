@@ -12,9 +12,7 @@ img {
 }
 
 body {
-  background-image: url(../images/Dragonflight.png);
-  background-repeat: no-repeat;
-  background-size: auto;
+
 
 }
 /* /GENERAL STYLES */
@@ -166,7 +164,7 @@ footer {
   .nav-links {
     position: absolute;
     right: 0;
-    height: 80vh;
+    bottom: 0;
     top: 8vh;
     background-color: tomato;
     flex-direction: column;
