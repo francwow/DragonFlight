@@ -12,6 +12,9 @@ img {
 }
 
 body {
+  background-image: url(../images/Dragonflight.png);
+  background-repeat: no-repeat;
+  background-size:auto;
 
 }
 /* /GENERAL STYLES */
@@ -46,13 +49,16 @@ nav a {
   display: flex;
   font-size: large;
   justify-content: space-around;
-  width: 40%;
+  width: 60%;
   z-index: 99;
+  padding: 0;
+  margin: 0;
 }
 
 nav li {
   list-style: none;
-  margin: 0 20px 0 20px;
+  margin: 0 20px 0 0;
+  text-align: center;
 }
 
 .burger {
@@ -95,11 +101,31 @@ nav li {
 
  /* MAIN SECTION */
 .main-section {
-  background-image: url(../images/Dragonflight.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+  position: relative;
 }
+
+.overlay {
+  position: absolute;
+  top:0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.3);
+  opacity: 0;
+  transition: opacity .5s ease-in;
+}
+
+.overlay-visible {
+  position: absolute;
+  top:0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.3);
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
 
 .video-container {
   margin: auto;
@@ -125,21 +151,20 @@ nav li {
 }
 
 @media screen and (max-width:768px) {
-  body {
-    overflow-x: hidden;
-  }
   .nav-links {
     position: absolute;
     right: 0;
-    height: 92vh;
+    height: 100vh;
     top: 8vh;
     background-color: tomato;
     flex-direction: column;
     align-items: center;
     justify-content:flex-start;
     width: 50%;
-    transform: translateX(100%);
-    transition: transform .5s ease-in;
+    transform: scale(0,1);
+    transform-origin: right;
+    transition: transform .5s ease-in-out;
+    z-index: 99;
   }
   .nav-links li {
     margin: 50px 20px;
@@ -149,7 +174,9 @@ nav li {
     display: block;
   }
   .nav-active {
-    transform: translateX(0); 
+    transform: scale(1,1); 
+    transform-origin: right;
+    transition: transform .5s ease-in-out;
    }
 }
 
