@@ -11,23 +11,24 @@ img {
   max-width: 100%;
 }
 
-html {
-  height: 100vh;
-}
-
 body {
   background-image: url(../images/Dragonflight.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
 }
 /* /GENERAL STYLES */
 
 /* ----------------------- MOBILE FIRST STYLES ------------------------- */
 
 /* MAIN NAV */
+.nav-container {
+  position: relative;
+  display: block;
+  z-index: 99;
+}
 
 nav {
+  position: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -50,7 +51,7 @@ nav a {
   font-weight: bold;
 }
 
-.nav-links {
+.nav-ul {
   display: flex;
   font-size: large;
   justify-content: space-around;
@@ -58,6 +59,10 @@ nav a {
   z-index: 99;
   padding: 0;
   margin: 0;
+}
+
+.nav-links {
+  display: none;
 }
 
 nav li {
@@ -91,6 +96,12 @@ nav li {
   transform: rotate(45deg) translate(-5px,-6px);
 }
 
+.nav-active {
+  transform: scale(1,1); 
+  transform-origin: right;
+  transition: transform .5s ease-in-out;
+ }
+
 @keyframes navLinkFade{
   from {
     opacity: 0;
@@ -107,6 +118,7 @@ nav li {
  /* MAIN SECTION */
 .main-section {
   position: relative;
+  margin-top: 50px;
 }
 
 .overlay {
@@ -119,6 +131,7 @@ nav li {
   opacity: 0;
   display: none;
   transition: opacity .5s ease-in-out;
+  z-index: 1;
 }
 
 .overlay-visible {
@@ -131,6 +144,7 @@ nav li {
   opacity: 1;
   display: block;
   transition: opacity .5s ease-in;
+  z-index: 1;
 }
 
 
@@ -149,6 +163,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin: 0;
+  z-index: 99;
 }
 /* /MAIN SECTION */
 
@@ -167,24 +182,37 @@ footer {
 }
 
 @media screen and (max-width:768px) {
+  .nav-ul {
+    display: none;
+  }
   .nav-links {
-    position: absolute;
+    display: flex;
+    position: fixed;
+    padding: 0;
     right: 0;
-    bottom: 0;
+    height: 60vh;
     top: 8vh;
     background-color: tomato;
     flex-direction: column;
     align-items: center;
-    justify-content:flex-start;
+    justify-content: space-around;
     width: 50%;
     transform: scale(0,1);
     transform-origin: right;
     transition: transform .5s ease-in-out;
-    z-index: 99;
+    z-index: 89;
+    border-radius: 0 0 0 30px;
   }
   .nav-links li {
-    margin: 50px 20px;
+    margin: 20px 20px;
     opacity: 0;
+    text-align: center;
+  }
+  .nav-links a {
+    color: white;
+    font-size: larger;
+    text-decoration: none;
+    text-align: center;
   }
   .burger {
     display: block;
