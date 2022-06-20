@@ -37,4 +37,25 @@ const navSlide = () => {
   });
 }
 
+
+const acc = document.querySelector('.accordion');  
+let i;
+
+for (i = -1; i <= acc.length; i++) {
+      //Toggle Active Class
+  acc[i].addEventListener('click', () => {
+    acc.classList.toggle('accordion-active');
+
+    //Toggle Panel
+    const panel = document.querySelector('.panel');
+    if (panel.style.display === 'block') {
+      panel.style.display = 'none';
+    } else {
+      panel.style.display = 'block';
+    }
+  });
+}
+
+
+
 navSlide();
