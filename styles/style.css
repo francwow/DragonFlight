@@ -193,8 +193,10 @@ footer {
 }
 
 .panel {
-  display: none;
-  padding: 15px;
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 /* /MAIN SECTION */
 

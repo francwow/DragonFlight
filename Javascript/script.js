@@ -37,25 +37,25 @@ const navSlide = () => {
   });
 }
 
-
-const acc = document.querySelector('.accordion');  
+const accordionSlide = () => {
+const acc = document.getElementsByClassName('accordion');  
 let i;
 
-for (i = -1; i <= acc.length; i++) {
-      //Toggle Active Class
-  acc[i].addEventListener('click', () => {
-    acc.classList.toggle('accordion-active');
+  for (i = 0; i < acc.length; i++) {
+        //Toggle Active Class
+    acc[i].addEventListener('click', function() {
+      this.classList.toggle('accordion-active');
 
-    //Toggle Panel
-    const panel = document.querySelector('.panel');
-    if (panel.style.display === 'block') {
-      panel.style.display = 'none';
-    } else {
-      panel.style.display = 'block';
-    }
-  });
+      //Toggle Panel
+      const panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
 }
 
-
-
+accordionSlide();
 navSlide();
