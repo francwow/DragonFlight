@@ -68,12 +68,17 @@ const showImage = () => {
   const imgThree = document.querySelector('.img-3');
   const imgFour = document.querySelector('.img-4');
   const imgFive = document.querySelector('.img-5');
+  const dark = document.querySelector('.dark');
+
 
   descOne.addEventListener('click', () => {
+
     if (descOne.classList[2] === 'accordion-active') {
       imgOne.classList.add('img-show');
+      dark.style.display = 'block';
     } else {
       imgOne.classList.remove('img-show');
+      dark.style.display = 'none';
     }
     imgTwo.classList.remove('img-show');
     imgThree.classList.remove('img-show');
@@ -84,8 +89,10 @@ const showImage = () => {
   descTwo.addEventListener('click', () => {
     if (descTwo.classList[2] === 'accordion-active') {
       imgTwo.classList.add('img-show');
+      dark.style.display = 'block';
     } else {
       imgTwo.classList.remove('img-show');
+      dark.style.display = 'none';
     }
     imgOne.classList.remove('img-show');
     imgThree.classList.remove('img-show');
@@ -96,8 +103,10 @@ const showImage = () => {
   descThree.addEventListener('click', () => {
     if (descThree.classList[2] === 'accordion-active') {
       imgThree.classList.add('img-show');
+      dark.style.display = 'block';
     } else {
       imgThree.classList.remove('img-show');
+      dark.style.display = 'none';
     }
     imgTwo.classList.remove('img-show');
     imgOne.classList.remove('img-show');
@@ -108,8 +117,10 @@ const showImage = () => {
   descFour.addEventListener('click', () => {
     if (descFour.classList[2] === 'accordion-active') {
       imgFour.classList.add('img-show');
+      dark.style.display = 'block';
     } else {
       imgFour.classList.remove('img-show');
+      dark.style.display = 'none';
     }
     imgTwo.classList.remove('img-show');
     imgThree.classList.remove('img-show');
@@ -120,8 +131,10 @@ const showImage = () => {
   descFive.addEventListener('click', () => {
     if (descFive.classList[2] === 'accordion-active') {
       imgFive.classList.add('img-show');
+      dark.style.display = 'block';
     } else {
       imgFive.classList.remove('img-show');
+      dark.style.display = 'none';
     }
     imgTwo.classList.remove('img-show');
     imgThree.classList.remove('img-show');
