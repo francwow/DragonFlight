@@ -14,13 +14,36 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <!-- MAIN NAV -->
-    <div class="nav-container">
-      <nav>
-        <div class="logo">
-          <h4>Dragonflight</h4>
-        </div>
-        <ul class="nav-ul">
+    <main>
+      <!-- MAIN NAV -->
+      <div class="nav-container">
+        <nav>
+          <div class="logo">
+            <h4>Dragonflight</h4>
+          </div>
+          <ul class="nav-ul">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="newClass.html">New Class & Race</a>
+            </li>
+            <li>
+              <a href="zone.html">New Zone</a>
+            </li>
+            <li>
+              <a href="lore.html">Lore</a>
+            </li>
+          </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+      </div>
+      <div>
+        <ul class="nav-links">
           <li>
             <a href="index.html">Home</a>
           </li>
@@ -34,70 +57,97 @@
             <a href="lore.html">Lore</a>
           </li>
         </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-    </div>
-    <div>
-      <ul class="nav-links">
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="newClass.html">New Class & Race</a>
-        </li>
-        <li>
-          <a href="zone.html">New Zone</a>
-        </li>
-        <li>
-          <a href="lore.html">Lore</a>
-        </li>
-      </ul>
-    </div>
-    <!-- / MAIN NAV -->
-
-    <!-- MAIN SECTION -->
-    <section class="main-section text-white">
-      <div class="overlay"></div>
-
-      <!-- FEATURES -->
-      <div class="container bg-dark my-5">
-        <div class="row justify-content-around">
-          <div class="col-md-4 my-3">
-            <h3>New Level Cap</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Repellendus dolore dicta maiores animi expedita et accusantium
-              eum? Consectetur, placeat, eum dolorem officiis repellendus et
-              veritatis saepe amet sit, earum neque.
-            </p>
-          </div>
-          <div class="col-md-4 my-3">
-            <h3>New Level Cap</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Repellendus dolore dicta maiores animi expedita et accusantium
-              eum? Consectetur, placeat, eum dolorem officiis repellendus et
-              veritatis saepe amet sit, earum neque.
-            </p>
-          </div>
-          <div class="col-md-4 my-3">
-            <h3>New Level Cap</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Repellendus dolore dicta maiores animi expedita et accusantium
-              eum? Consectetur, placeat, eum dolorem officiis repellendus et
-              veritatis saepe amet sit, earum neque.
-            </p>
-          </div>
-        </div>
       </div>
-      <!-- /FEATURES -->
-    </section>
-    <!-- /MAIN SECTION -->
+      <!-- / MAIN NAV -->
+
+      <!-- MAIN SECTION -->
+      <section class="main-section text-white">
+        <div class="overlay"></div>
+        <div class="home-wrapper my-5">
+          <div class="container mx-auto text-center px-5 my-5">
+            <h1 class="mb-4">NEW PLAYABLE CLASS & RACE</h1>
+          </div>
+        </div>
+
+        <!-- FEATURES -->
+        <div class="race-features">
+          <!-- TITLES + DESCRIPTIONS -->
+          <div class="desc-container">
+            <div>
+              <h3 class="accordion desc-1">Draconic Heritage</h3>
+              <p class="panel">
+                Dracthyr Evokers freely switch between two customizable
+                forms-choosing between humanoid visage, and a fearsome draconic
+                form to battle foes and overcome obstacles.
+              </p>
+            </div>
+            <div>
+              <h3 class="accordion desc-2">Choose your Allegiance</h3>
+              <p class="panel">
+                Dracthyr Evokers seek to forge their own path in Azeroth, and
+                willingly fight for the Horde or the Alliance.
+              </p>
+            </div>
+            <div>
+              <h3 class="accordion desc-3">Intro Experience</h3>
+              <p class="panel">
+                Delve into the story of the Dracthyr in a brand-new starting
+                experience and learn how to use your new abilities before
+                venturing forth.
+              </p>
+            </div>
+            <div>
+              <h3 class="accordion desc-4">Specializations</h3>
+              <p class="panel">
+                Dracthyr Evokers can fight from mid-range with claws and fiery
+                breath attacks (Devastation) or draw upon the life-giving magic
+                of renewal to bolster their allies (Preservation).
+              </p>
+            </div>
+            <div>
+              <h3 class="accordion desc-5">Empowered Abilities</h3>
+              <p class="panel">
+                Dracthyr Evokers can empower their draconic abilities through
+                magic. Charge-up your attacks and unleash them at the right
+                moment to maximize their effects.
+              </p>
+            </div>
+          </div>
+          <!-- /TITLES + DESCRIPTIONS -->
+          <!-- IMAGES -->
+          <div class="img-container">
+            <img
+              class="img-hide img-1"
+              src="images/EVOKER.jpg"
+              alt="Evoker Class"
+            />
+            <img
+              class="img-hide img-2"
+              src="images/DRACTHYR.jpg"
+              alt="Dracthyr Race"
+            />
+            <img
+              class="img-hide img-3"
+              src="images/INTRO.jpeg"
+              alt="Evoker Class"
+            />
+            <img
+              class="img-hide img-4"
+              src="images/SPEC.jpg"
+              alt="Evoker Specialization"
+            />
+            <img
+              class="img-hide img-5"
+              src="images/ABILITIES.jpg"
+              alt="Dracthyr Abilities"
+            />
+          </div>
+          <!-- /IMAGES -->
+        </div>
+        <!-- /FEATURES -->
+      </section>
+      <!-- /MAIN SECTION -->
+    </main>
     <!-- FOOTER -->
     <footer>
       <div class="container mx-auto text-center">

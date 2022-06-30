@@ -11,10 +11,11 @@ img {
   max-width: 100%;
 }
 
-body {
+main {
   background-image: url(../images/Dragonflight.png);
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 90vh;
 }
 /* /GENERAL STYLES */
 
@@ -155,6 +156,12 @@ nav {
   z-index: 1;
 }
 
+.race-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: auto;
+}
 
 .video-container {
   margin: auto;
@@ -179,12 +186,15 @@ footer {
   text-align: left;
   border: none;
   cursor: pointer;
-  padding: 0 15px;
+  padding: 15px;
+  font-size: larger;
+  background-color: rgb(82, 82, 255);
+  color: white;
 }
 
 .accordion-active,
 .accordion:hover {
-  background-color: grey;
+  background-color: rgb(241, 115, 115);
 }
 
 .accordion::after {
@@ -197,6 +207,35 @@ footer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+.panel p {
+  margin-top: 13px;
+  padding: 5px;
+}
+
+.desc-container {
+  margin-right: 10px;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.img-hide {
+  opacity: 0;
+  transition: opacity .4s ease-out;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.img-show {
+  opacity: 1;
 }
 /* /MAIN SECTION */
 
